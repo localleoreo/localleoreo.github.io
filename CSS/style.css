@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #FEBBBB;
+    text-align: center;
+}
+body{
+    background-image: url(../GALERIA/kuromi.png);
+    background-blend-mode: lighten;
+}
+nav{
+    float: left;
+    background-color: #FFCCCC;
+    width: 15%;
+    height: 150vi;
+    border-radius: 2%;
+}
+ul{
+    padding-left: 7%;
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: large;
+    color: salmon;
+}
+nav ul li a:hover{
+    font-size: larger;
+}
+nav ul li{
+    font-size: large;
+    color: salmon;
+}
+main{
+    display: block;
+    color: #FAFAFA;
+}
+article {
+    display: block;
+    padding-left: 10%;
+}
+table, th, td{
+    
+    border: 1px solid black;
+    text-align: center;
+}
+
+button{
+    border-radius: 10%;
+}
