@@ -50,3 +50,75 @@ console.log(liczby);
 //kreator
 
 let kreator = new Array(9).fill(0)
+console.log(kreator);
+
+//tablica obiektow
+let samohut = [
+    {
+        marka: "Ford",
+        model: "Mondeo",
+        przebieg: 150000,
+        silnik: 2.0,
+        cena: 60000,
+
+    },
+    {
+        marka: "Saab",
+        model: "9.3",
+        przebieg: 392000,
+        silnik: 2.0,
+        cena: 20000,
+    },
+    {
+        marka: "Opel",
+        model: "Astra",
+        przebieg: 130000,
+        silnik: 2.0,
+        cena: 70000,
+    },
+    {
+        marka: "Mazda",
+        model: "6",
+        przebieg: 126000,
+        silnik: 2.0,
+        cena: 90000,
+    }
+]
+
+// pętla forEach
+
+samohut.forEach(function(i){
+    console.log(i);
+})
+
+//Wyświetlanie obiektów na podstawie określonych kryteriów
+
+// przebieg < 130000
+samohut.forEach(function(i){
+    if (i.przebieg < 151000){
+        return console.log(i.model);
+    }
+})
+
+//map - tworzy nową tablice ze zmodyfikowanymi wartościami
+
+let cennik_brutto = samohut.map(function(i){
+    return i.cena * 1.23
+})
+console.log(cennik_brutto);
+
+// filtrowanie funkcja filter - tworzy nową tablicę dla wszystkich elementów
+// bieżącej tablicy, dla której spełniony jest warunek
+
+let filtrowanie = samohut.filter(function(i){
+    return i.przebieg < 150000
+})
+console.log(filtrowanie);
+
+// reduce - redukuje tablicę do jednej wartości, wywołuje funkcję zwrotną dla elementów tablicy
+
+const wartosc = samohut.reduce(
+    (suma,produkt) => suma + produkt.cena, 0
+)
+
+console.log(`Wartość wszystkich samochodów łącznie wynosi ${wartosc}`);
